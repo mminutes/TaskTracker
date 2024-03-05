@@ -9,14 +9,14 @@
 let tasks = [];
 
 // Section 3: Cached Element References
-document.addEventListener('DOMContentLoaded', function() {
 const taskForm = document.getElementById("taskForm");
 const taskTable = document.getElementById("taskTable");
 
-// TESTING
-// console.log('hi');
-// console.log('hello');
-});
+// Event listener for form submission
+taskForm.addEventListener('submit', handleSubmission);
+
+// Call the init function to set up the initial state of the app
+init();
 
 // Function to handle form submissions
 function handleSubmission(event) {
@@ -33,13 +33,12 @@ function handleSubmission(event) {
     }
 
     // TODO: Update the tasks array
-    tasks.push ({name: taskName, description: taskDescription, deadline: taskDeadline})
+    tasks.push ({name: taskName, description: taskDescription, deadline: taskDeadline});
 
     render();
 }
 
-//  ***** START AGAIN HERE; PDF PAGE 7 *****
-    // Function to render tasks in the table
+// Function to render tasks in the table
 function render() {
 
     // TODO: Use array methods to create a new table row of data for each item in the array comment
@@ -55,15 +54,9 @@ function render() {
 
 }   
 
-    // Function to initialize the table
+// Function to initialize the table
 function init() {
     taskTable.innerHTML = ''; // Clear the table
     tasks = []; // Reset the tasks array
     render(); // Call the render function
 }
-
-// Event listener for form submission
-taskForm.addEventListener('submit', handleSubmission);
-
-// Call the init function to set up the initial state of the app
-init();

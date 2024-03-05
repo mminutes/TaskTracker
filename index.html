@@ -14,19 +14,16 @@
             <!-- Task form inputs go here -->
 
             <!-- A label and input field for task name with an id of taskName. -->
-            <label id="taskName">
-                <input type="text" id="taskName"/>
-            </label>
+            <label for="taskName">Task Name: </label>
+            <input type="text" id="taskName" name="taskName" />
 
             <!-- A label and text area for task description with an id of taskDescription. -->
-            <label id="taskDescription">
-                <textarea id="taskDescription"></textarea>
-            </label>
+            <label for="taskDescription">Description: </label>
+            <textarea id="taskDescription" name="taskDescription"></textarea>
 
             <!-- A label and input field for task deadline with an id of taskDeadline. -->
-            <label id="taskDeadline">
-                <input type="text" id="taskDeadline" />
-            </label>
+            <label for="taskDeadline">Deadline: </label>
+                <input type="text" id="taskDeadline" name="taskDeadline" />
 
             <button type="submit">Add Task</button>
         </form>
