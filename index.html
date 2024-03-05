@@ -10,26 +10,37 @@
 <body>
     <div class="container">
         <h1>Task Tracker</h1>
-        <form id="taskForm">
-            <!-- Task form inputs go here -->
+            <form id="taskForm">
+                <div class="center">
+                    <!-- Task form inputs go here -->
+                    
+                    <!-- A label and input field for task name with an id of taskName. -->
 
-            <!-- A label and input field for task name with an id of taskName. -->
-            <label for="taskName">Task Name: </label>
-            <input type="text" id="taskName" name="taskName" />
+                    <label for="taskName">Task: </label>
+                    <input type="text" id="taskName" name="taskName" />
 
-            <!-- A label and text area for task description with an id of taskDescription. -->
-            <label for="taskDescription">Description: </label>
-            <textarea id="taskDescription" name="taskDescription"></textarea>
 
-            <!-- A label and input field for task deadline with an id of taskDeadline. -->
-            <label for="taskDeadline">Deadline: </label>
-                <input type="text" id="taskDeadline" name="taskDeadline" />
+                    <!-- A label and text area for task description with an id of taskDescription. -->
+                    <label for="taskDescription">Description: </label>
+                    <textarea id="taskDescription" name="taskDescription" rows="2"></textarea>
 
-            <button type="submit">Add Task</button>
-        </form>
-        <table id="taskTable">
-            <!-- Task table content here -->
-        </table>
+                    <!-- A label and input field for task deadline with an id of taskDeadline. -->
+                    <label for="taskDeadline">Deadline: </label>
+                    <!-- <input type="text" id="taskDeadline" name="taskDeadline" /> -->
+                    <input type="date" id="taskDeadline" name="taskDeadline">
+                </div>
+                <br>
+                <div class="centerTasks">
+                    <button type="submit">Add Task</button>
+                </div>
+            </form>
+        <div class="centerTasks">
+            <ol>
+            <table id="taskTable">
+                <!-- Task table content here -->
+            </table>
+        </ol>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
