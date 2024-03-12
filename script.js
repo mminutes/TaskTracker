@@ -57,7 +57,9 @@ function render() {
 
 // Function to initialize the table
 function init() {
+    
     taskTable.innerHTML = ''; // Clear the table
     tasks = []; // Reset the tasks array
     render(); // Call the render function
+
 }
